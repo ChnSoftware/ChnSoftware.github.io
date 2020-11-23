@@ -1,0 +1,22 @@
+// Back To Top
+.back-top {
+	position: fixed;
+	right: 4rem;
+	bottom: 4rem;
+	width: 5rem;
+	height: 5rem;
+	font-size: 2rem;
+    border: 0.1rem solid $red-color;
+    border-radius: .5rem;
+	color: $light-color;
+	background-color: $dark-color;
+    opacity: 0.6;
+    cursor: pointer;
+	transition: $general-transition;
+
+	&:hover {
+		opacity: 1;
+		border: 0.1rem solid $dark-color;
+		background-color: $green-color;
+	}
+}

@@ -1,0 +1,71 @@
+/* Reset and General Settings */
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+html {
+	font-size: 10px;
+}
+body {
+	font-family: $text-font;
+	color: $text-color;
+	background-color: $light-color;
+}
+.container {
+	max-width: 114rem;
+	margin: 0 auto;
+	width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $head-font;
+	color: $green-color;
+	font-weight: 300;
+	text-transform: capitalize;
+}
+h1 {
+	font-size: 3.6rem;
+}
+h2 {
+	font-size: 2.4rem;
+	letter-spacing: 0.1rem;
+	font-weight: 400;
+}
+h3 {
+	font-size: 1.8rem;
+	letter-spacing: 0.1rem;
+}
+h4 {
+	font-size: 2rem;
+}
+p {
+	font-size: 1.4rem;
+	line-height: 2.5rem;
+}
+a {
+	text-decoration: none;
+	text-transform: capitalize;
+	font-family: $head-font;
+	color: $text-color;
+	font-size: 1.4rem;
+	letter-spacing: 0.1rem;
+}
+ul {
+	list-style: none;
+}
+img {
+	width: 100%;
+	max-width: 100%;
+}
+::selection {
+	background-color: $green-color;
+	color: $light-color;
+}
