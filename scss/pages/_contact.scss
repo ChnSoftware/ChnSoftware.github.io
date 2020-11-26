@@ -1,0 +1,97 @@
+.contact {
+	background: url("../img/img_12.jpg") center/cover no-repeat;
+
+	&-gradient {
+		background: linear-gradient(
+			-45deg,
+			rgba(#ee7752, 0.5),
+			rgba(#e73c7e, 0.5),
+			rgba(#23a6d5, 0.5),
+			rgba(#23d5ab, 0.5)
+		);
+		background-size: 400% 400%;
+		height: 100vh;
+		animation: Gradient 10s ease infinite;
+		display: flex;
+        align-items: center;
+	}
+
+	&-info {
+		width: 100%;
+		@include flex-display(flex, center, center);
+
+		@include media(medium) {
+			flex-direction: column;
+		}
+
+		.card {
+			position: relative;
+			flex: 1;
+			width: 30rem;
+			min-height: 14rem;
+			background-color: $dark-color;
+			margin: 2rem;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.icon {
+				font-size: 3.6rem;
+				color: $green-color;
+				transition: $general-transition;
+			}
+
+			&-content {
+				h3,
+				a {
+					position: absolute;
+					opacity: 0;
+					left: 50%;
+					transform: translateX(-50%);
+					font-size: 1.6rem;
+					white-space: nowrap;
+				}
+
+				h3 {
+					top: 2rem;
+					text-transform: capitalize;
+					color: $light-color;
+				}
+
+				a {
+					bottom: 2rem;
+					color: $green-color;
+					text-transform: none;
+				}
+			}
+			&:hover {
+				.icon {
+					transform: scale(4);
+					opacity: 0;
+				}
+				h3 {
+					opacity: 1;
+					top: 4.6rem;
+					transition: 500ms linear 500ms;
+				}
+				a {
+					opacity: 1;
+					bottom: 4.6rem;
+					transition: 500ms linear 500ms;
+				}
+			}
+		}
+	}
+}
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

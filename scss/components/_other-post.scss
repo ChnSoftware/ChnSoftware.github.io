@@ -1,0 +1,138 @@
+.other-posts {
+	.post {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 25rem);
+		grid-gap: 4rem;
+		grid-template-areas:
+			"item-1 item-1 item-2"
+			"item-3 item-4 item-2";
+
+		@include media(xlarge) {
+			grid-gap: 2rem;
+		}
+		@include media(large) {
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(3, 25rem);
+			grid-gap: 1rem;
+			grid-template-areas:
+				"item-1 item-1 item-2 item-2"
+				"item-3 item-3 item-2 item-2"
+				"item-4 item-4 item-2 item-2";
+		}
+		@include media(medium) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 25rem);
+			grid-gap: 1rem;
+			grid-template-areas:
+				"item-1 item-2"
+				"item-1 item-2";
+		}
+		@include media(small) {
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(4, 25rem);
+			grid-column-gap: 0;
+			grid-row-gap: 1rem;
+			grid-template-areas:
+				"item-1"
+				"item-2"
+				"item-3"
+				"item-4";
+			margin-bottom: 4rem;
+		}
+
+		&-item {
+			&-1 {
+				grid-area: item-1;
+
+				@include media(medium) {
+					a {
+						height: 100%;
+					}
+				}
+			}
+			&-2 {
+				grid-area: item-2;
+			}
+			&-3 {
+				grid-area: item-3;
+
+				@include media(medium) {
+					display: none;
+				}
+				@include media(small) {
+					display: block;
+				}
+			}
+			&-4 {
+				grid-area: item-4;
+
+				@include media(medium) {
+					display: none;
+				}
+				@include media(small) {
+					display: block;
+				}
+			}
+
+			.h-entry {
+				display: block;
+				border-radius: 0.4rem;
+				overflow: hidden;
+				@include background-spr(cover, center, no-repeat);
+
+				&.gradient {
+					position: relative;
+
+					&:before {
+						z-index: 1;
+						content: "";
+						position: absolute;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						background: linear-gradient(
+							to bottom,
+							transparent 0%,
+							transparent 18%,
+							rgba(0, 0, 0, 0.8) 99%,
+							rgba(0, 0, 0, 0.8) 100%
+						);
+					}
+				}
+			}
+			.tag {
+				position: absolute;
+				top: 1rem;
+				left: 2rem;
+				z-index: 100;
+			}
+			&-text {
+				position: absolute;
+				bottom: 0;
+				z-index: 10;
+				padding: 2rem;
+				max-width: 35rem;
+				line-height: 2.5rem;
+
+				.title {
+					color: $light-color;
+					font-weight: 400;
+					font-size: 1.8rem;
+					margin-bottom: 0;
+					transition: $general-transition;
+
+					&:hover {
+						color: darken($light-color, 20%);
+					}
+				}
+				.date {
+					color: lighten($dark-color, 60%);
+					font-size: 1.5rem;
+					transition: $general-transition;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,161 @@
+/* Footer Section */
+footer {
+	color: $gray-color;
+
+	@include media(small) {
+		padding: 4rem 0 8rem !important;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+
+		.footer-top {
+			display: grid;
+			grid-template-columns: 3fr 4fr 3fr;
+			margin-bottom: 5rem;
+
+			@include media(large) {
+				grid-template-columns: 3fr 2fr 3fr;
+			}
+			@include media(medium) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			@include media(small) {
+				grid-template-columns: 1fr;
+				margin-bottom: 2rem;
+			}
+
+			.footer-about {
+				h3 {
+					@include media(small) {
+						font-size: 2.4rem;
+						text-align: center;
+					}
+				}
+				&-description {
+					margin-top: 2rem;
+					text-align: justify;
+				}
+			}
+
+			.footer-menu {
+				justify-self: center;
+
+				@include media(medium) {
+					display: none;
+				}
+
+				&-bottom {
+					margin-top: 2rem;
+					display: flex;
+					justify-content: space-around;
+
+					@include media(large) {
+						display: block;
+					}
+
+					.menu-list {
+						&:nth-child(1) {
+							padding-right: 3rem;
+						}
+
+						.menu-link {
+							color: $gray-color;
+							line-height: 2.5rem;
+							@include general-transition(all, 300ms, ease);
+
+							&:hover {
+								color: $light-color;
+							}
+						}
+					}
+				}
+			}
+
+			.footer-contact {
+				@include media(medium) {
+					justify-self: center;
+				}
+				@include media(small) {
+					display: none;
+				}
+
+				&-list {
+					margin-top: 2rem;
+				}
+				&-link {
+					color: $light-color;
+					font-size: 2.5rem;
+					display: inline-block;
+					height: 4rem;
+					width: 4rem;
+					line-height: 4rem;
+					text-align: center;
+					border: 0.1rem solid $light-color;
+					border-radius: 50%;
+					margin-right: 1rem;
+					letter-spacing: 0;
+					@include general-transition(all, 300ms, ease);
+
+					&:nth-child(1) {
+						&:hover {
+							background: radial-gradient(
+								circle at 30% 107%,
+								#fdf497 0%,
+								#fdf497 5%,
+								#fd5949 45%,
+								#d6249f 60%,
+								#285aeb 90%
+							);
+							border-color: transparent;
+						}
+					}
+					&:nth-child(2) {
+						&:hover {
+							background-color: $youtube-color;
+							border-color: transparent;
+						}
+					}
+					&:nth-child(3) {
+						&:hover {
+							background-color: $light-color;
+							border-color: transparent;
+							color: $youtube-color;
+						}
+					}
+				}
+			}
+		}
+	}
+	.footer-bottom {
+		margin: 0 auto;
+		padding: 0 1rem;
+		text-align: center;
+
+		span:nth-of-type(1) {
+			@include media(medium) {
+				display: none;
+			}
+		}
+		span:nth-of-type(2) {
+			@include media(large) {
+				display: block;
+				text-align: center;
+			}
+		}
+
+		.brand {
+			@include general-transition(all, 300ms, ease);
+			color: $gray-color;
+
+			&:hover {
+				color: $light-color;
+				text-decoration: underline;
+			}
+		}
+		i {
+			color: $green-color;
+		}
+	}
+}

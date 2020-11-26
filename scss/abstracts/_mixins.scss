@@ -1,0 +1,42 @@
+// Flex-Display Mixin
+@mixin flex-display($display, $align-items, $justify-content) {
+	display: $display;
+	align-items: $align-items;
+	justify-content: $justify-content;
+}
+
+// Transition Mixin
+@mixin general-transition($type, $time, $effect) {
+	transition: $type $time $effect;
+}
+
+// Background Size - Position - Repeat Mixin
+@mixin background-spr($size, $position, $repeat) {
+	background-size: $size;
+	background-position: $position;
+	background-repeat: $repeat;
+}
+
+// Media Queries Mixin
+@mixin media($screensize) {
+	@if ($screensize == xlarge) {
+		@media (max-width: 1280px) {
+			@content;
+		}
+	}
+	@if ($screensize == large) {
+		@media (max-width: 992px) {
+			@content;
+		}
+	}
+	@if ($screensize == medium) {
+		@media (max-width: 768px) {
+			@content;
+		}
+	}
+	@if ($screensize == small) {
+		@media (max-width: 576px) {
+			@content;
+		}
+	}
+}
