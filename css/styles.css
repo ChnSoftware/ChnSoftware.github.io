@@ -766,8 +766,9 @@ footer .footer-bottom i {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 8rem;
   background-color: #27ae60;
+  height: 8rem;
+  overflow: hidden;
 }
 
 @media (max-width: 992px) {

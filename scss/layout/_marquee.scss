@@ -1,7 +1,8 @@
 .marquee {
 	@include flex-display(flex, center, center);
-	height: 8rem;
 	background-color: $green-color;
+    height: 8rem;
+    overflow: hidden;
 
 	@include media(large) {
 		flex-direction: column;
