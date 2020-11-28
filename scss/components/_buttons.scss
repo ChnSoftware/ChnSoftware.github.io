@@ -10,11 +10,11 @@
 	border-radius: 0.5rem;
 	color: $light-color;
 	background-color: $dark-color;
-	opacity: 0.6;
+	opacity: 0;
 	cursor: pointer;
 	transition: $general-transition;
 
-	@include media(small) {
+	@include media(large) {
 		display: none;
 	}
 

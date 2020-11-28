@@ -10,14 +10,14 @@
 	.container {
 		@include flex-display(flex, center, space-between);
 
-		@include media(small) {
+		@include media(medium) {
 			@include flex-display(flex, center, center);
 		}
 
 		.top-social-media {
 			display: flex;
 
-			@include media(small) {
+			@include media(medium) {
 				display: none;
 			}
 
@@ -44,7 +44,7 @@
 			}
 		}
 		.search-area {
-			@include media(small) {
+			@include media(medium) {
 				display: none;
 			}
 
@@ -70,15 +70,39 @@
 	}
 }
 .nav-header {
-	@include media(medium) {
+	/* @include media(medium) {
 		display: none;
-	}
+	} */
 
 	.navbar {
 		@include flex-display(flex, center, flex-end);
 
+		@include media(medium) {
+			@include flex-display(flex, flex-start, flex-start);
+			padding-top: 10rem;
+			background-color: $dark-color;
+			position: fixed;
+			top: 0;
+			right: 0;
+			height: 100vh;
+			width: 0;
+			z-index: 100;
+			transform: translateX(100%);
+			transition: $general-transition;
+
+			&.active {
+				width: 50vw;
+				transform: translateX(0);
+			}
+		}
+
 		.nav-list {
 			display: flex;
+
+			@include media(medium) {
+				flex-direction: column;
+				flex-basis: 100%;
+			}
 
 			.nav-item {
 				line-height: 8rem;
@@ -89,6 +113,11 @@
 					font-size: 1.6rem;
 					margin: 1rem;
 					color: $light-color;
+
+					@include media(small) {
+						padding: 0;
+						font-size: 1.4rem;
+					}
 				}
 
 				&:hover {
@@ -96,5 +125,29 @@
 				}
 			}
 		}
+	}
+}
+.close-menu {
+	cursor: pointer;
+	transition: $general-transition;
+	position: fixed;
+	top: 2.5rem;
+	right: 2rem;
+	display: none;
+	z-index: 101;
+	transition: $general-transition;
+
+	&.active {
+		right: 50%;
+		transform: translateX(100%);
+	}
+
+	@include media(medium) {
+		display: block;
+	}
+
+	img {
+		width: 50px;
+		height: auto;
 	}
 }

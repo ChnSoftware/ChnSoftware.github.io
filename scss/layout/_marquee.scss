@@ -46,6 +46,7 @@
 			animation: scroll-left 30s linear infinite;
 
 			@include media(large) {
+				animation: scroll-left 20s linear infinite;
 				font-size: 2rem;
 				line-height: 5rem;
 			}
