@@ -8,9 +8,6 @@
     <meta name="author" content="Cihan Türkeş">
     <!-- Fontawesome CSS Link -->
     <link rel="stylesheet" href="./css/fontawesome-all.css">
-    <!-- Owl Carousel Links -->
-    <link rel="stylesheet" href="./css/owl.carousel.css">
-    <link rel="stylesheet" href="./css/owl.theme.default.css">
     <!-- Styles CSS Link -->
     <link rel="stylesheet" href="./css/styles.css">
 
@@ -61,7 +58,7 @@
     <!-- Single Section -->
     <section class="single">
         <div class="container">
-            <div class="entry-meta">
+            <div class="entry-meta ml-2">
                 <img src="./img/logo-black.png" alt="">
                 <p class="entry-meta-name">Ne İyi Gelir?</p>
                 <p class="entry-meta-date mx-1">Temmuz 23, 2020</p>
@@ -225,11 +222,32 @@
         </div>
     </section>
     <!-- End Other Posts Section -->
+    <!-- Marquee Section -->
+    <section class="marquee p-0">
+        <div class="marquee-top">
+            <h2 class="marquee-top-title">Sınırlı Sorumluluk Beyanı</h2>
+        </div>
+        <div class="marquee-content">
+            <marquee behavior="scroll" direction="left">
+                <p class="marquee-content-detail">
+                    Web sitemizin içeriği, ziyaretçiyi bilgilendirmeye yönelik
+                    hazırlanmıştır. Sitede yer alan bilgiler, hiçbir zaman bir
+                    hekim tedavisinin ya da konsültasyonunun yerini alamaz. Bu
+                    kaynaktan yola çıkarak, ilaç tedavisine başlanması ya da mevcut
+                    tedavinin değiştirilmesi kesinlikte tavsiye edilmez. Web
+                    sitemizin içeriği, asla kişisel teşhis ya da tedavi yönteminin
+                    seçimi için değerlendirilmemelidir. Sitede kanun içeriğine
+                    aykırı ilan ve reklam yapma kastı bulunmamaktadır.
+                </p>
+            </marquee>
+        </div>
+    </section>
+    <!-- End Marquee Section -->
     <!-- Footer Section -->
     <footer class="bg-dark py-8">
-        <div class="container">
+        <div class="container px-1">
             <div class="footer-top">
-                <div class="footer-about">
+                <div class="footer-about p-1">
                     <h3>Bizi Tanımak İsterseniz</h3>
                     <p class="footer-about-description">Uluslararası otoriteler tarafından kabul edilen kurumlarca
                         yayınlanan bitkisel konular
@@ -239,7 +257,7 @@
                         için gönüllü olarak çalışan bir ekibiz.
                     </p>
                 </div>
-                <div class="footer-menu">
+                <div class="footer-menu p-1">
                     <h3>Menüler</h3>
                     <div class="footer-menu-bottom">
                         <ul class="menu-list">
@@ -250,23 +268,29 @@
                         <ul class="menu-list">
                             <li class="menu-item"><a href="#" class="menu-link">Apiterapi</a></li>
                             <li class="menu-item"><a href="#" class="menu-link">Neye Ne İyi Gelir?</a></li>
-                            <li class="menu-item"><a href="#" class="menu-link">Öneri ve İletişim</a></li>
+                            <li class="menu-item"><a href="contact.html" class="menu-link">Öneri ve İletişim</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="footer-contact">
-                    <h3>Bizimle İletişime Geçmek İsterseniz</h3>
+                <div class="footer-contact p-1">
+                    <h3>Sosyal Medya</h3>
                     <p class="footer-contact-list">
-                        <a href="#" class="footer-contact-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="footer-contact-link"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="footer-contact-link"><i class="fas fa-envelope"></i></a>
+                        <a href="#" target="_blank" class="footer-contact-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" class="footer-contact-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" target="_blank" class="footer-contact-link"><i class="fas fa-envelope"></i></a>
                     </p>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>Bütün Hakları Saklıdır. &copy;
-                    <script>document.write(new Date().getFullYear());</script> | Bu tema <a href="#"
-                        class="brand">NeİyiGelir</a> ekibi <i class="fa fa-leaf"></i> tarafından tasarlanmıştır.
+                    <script>document.write(new Date().getFullYear());</script>
+                    <span> | </span>
+                    <span>Bu tema <a href="https://www.youtube.com/results?search_query=arin+yaz%C4%B1l%C4%B1m"
+                            class="brand" target="_blank">Arin Yazılımın</a> katkılarıyla <a href="#"
+                            class="brand">NeİyiGelir</a> ekibi
+                        <i class="fa fa-leaf"></i>
+                        tarafından tasarlanmıştır.
+                    </span>
                 </p>
             </div>
         </div>
@@ -276,10 +300,6 @@
     <button class="back-top"><i class="fas fa-chevron-up"></i></button>
     <!-- End Back To Top -->
 
-    <!-- Jquery -->
-    <script src="js/jquery-3.5.1.slim.js""></script>
-<!-- Owl Carousel JS -->
-<script src=" js/owl.carousel.js"></script>
     <!-- Main JS -->
     <script src="js/main.js"></script>
 </body>

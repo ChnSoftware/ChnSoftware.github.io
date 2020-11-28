@@ -5,14 +5,26 @@
 	&-content {
 		display: flex;
 
+		@include media(large) {
+			flex-direction: column;
+		}
+
 		&-detail {
-			flex: 12;
+			flex: 70%;
 			margin-right: 4rem;
+
+			@include media(xlarge) {
+				flex: 65%;
+				margin-right: 2rem;
+			}
+			@include media(large) {
+				margin-right: 0;
+			}
 
 			p {
 				line-height: 3rem;
-				margin-bottom: 2rem;
-				font-size: 1.6rem;
+				font-size: 1.8rem;
+				padding: 2rem;
 			}
 			.gallery {
 				margin: 5rem 0;
@@ -23,6 +35,16 @@
 				grid-template-areas:
 					"item-1 item-1"
 					"item-2 item-3";
+
+				@include media(large) {
+					grid-gap: 1rem;
+				}
+				@include media(medium) {
+					margin: 0;
+					grid-template-columns: 1fr;
+					grid-template-rows: 25rem;
+					grid-column-gap: 0;
+				}
 
 				.image {
 					img {
@@ -37,9 +59,17 @@
 					}
 					&-2 {
 						grid-area: item-2;
+
+						@include media(medium) {
+							display: none;
+						}
 					}
 					&-3 {
 						grid-area: item-3;
+
+						@include media(medium) {
+							display: none;
+						}
 					}
 				}
 			}

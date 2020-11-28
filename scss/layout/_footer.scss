@@ -1,6 +1,8 @@
 /* Footer Section */
 footer {
 	color: $gray-color;
+	overflow: hidden;
+	height: 100%;
 
 	@include media(small) {
 		padding: 4rem 0 8rem !important;
@@ -42,6 +44,10 @@ footer {
 			.footer-menu {
 				justify-self: center;
 
+				@include media(large) {
+					justify-self: end;
+				}
+
 				@include media(medium) {
 					display: none;
 				}
@@ -58,6 +64,10 @@ footer {
 					.menu-list {
 						&:nth-child(1) {
 							padding-right: 3rem;
+
+							@include media(large) {
+								padding-right: 0;
+							}
 						}
 
 						.menu-link {
@@ -74,6 +84,9 @@ footer {
 			}
 
 			.footer-contact {
+				@include media(xlarge) {
+					justify-self: center;
+				}
 				@include media(medium) {
 					justify-self: center;
 				}

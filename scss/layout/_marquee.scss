@@ -34,16 +34,33 @@
 		background-color: lighten($dark-color, 5%);
 		flex-basis: 70%;
 		height: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+		box-sizing: border-box;
 
 		&-detail {
+			display: inline-block;
 			color: $light-color;
-			line-height: 8rem;
 			font-size: 2.4rem;
+			line-height: 8rem;
+			animation: scroll-left 30s linear infinite;
 
 			@include media(large) {
-				line-height: 5rem;
 				font-size: 2rem;
+				line-height: 5rem;
+			}
+			&:hover {
+				animation-play-state: paused;
 			}
 		}
+	}
+}
+
+@keyframes scroll-left {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-100%);
 	}
 }

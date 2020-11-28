@@ -1,0 +1,23 @@
+.categories {
+	.category {
+		@include media(xlarge) {
+			padding: 3rem;
+		}
+
+		&-title {
+			margin-bottom: 3rem;
+
+			@include media(large) {
+				text-align: center;
+			}
+		}
+		&-description {
+			font-size: 1.8rem;
+
+			@include media(medium) {
+				text-align: justify;
+				font-size: 1.5rem;
+			}
+		}
+	}
+}

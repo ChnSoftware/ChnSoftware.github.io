@@ -1,6 +1,15 @@
 .aside {
-	flex: 5;
+	flex: 30%;
 	margin-left: 4rem;
+
+	@include media(xlarge) {
+		flex: 35%;
+		margin-left: 2rem;
+	}
+	@include media(large) {
+		margin-left: 0;
+		display: none;
+	}
 
 	.aside-box {
 		margin-bottom: 4rem;
