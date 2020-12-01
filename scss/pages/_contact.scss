@@ -26,6 +26,7 @@
 
 		@include media(medium) {
 			flex-direction: column;
+			padding: 4rem 0;
 		}
 
 		.card {

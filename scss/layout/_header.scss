@@ -104,23 +104,32 @@
 			}
 
 			.nav-item {
+				width: 100%;
 				line-height: 8rem;
 				transition: $general-transition;
 				white-space: nowrap;
 
 				.nav-link {
-					padding: 0 1rem;
+					color: $light-color;
 					font-size: 1.6rem;
 					margin: 1rem;
-					color: $light-color;
+					padding: 0 1rem;
+					user-select: none;
+
+					@include media(medium) {
+						display: inline-block;
+						width: 100%;
+						height: 8rem;
+						margin: 0;
+					}
 
 					@include media(small) {
-						padding: 0;
 						font-size: 1.4rem;
 					}
 				}
 
-				&:hover {
+				&:hover,
+				&:active {
 					background-color: $green-color;
 				}
 			}
