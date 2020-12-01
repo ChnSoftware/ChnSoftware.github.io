@@ -1220,10 +1220,16 @@ main .recent-posts .recent-title {
 .contact-gradient {
   background: linear-gradient(-45deg, rgba(238, 119, 82, 0.5), rgba(231, 60, 126, 0.5), rgba(35, 166, 213, 0.5), rgba(35, 213, 171, 0.5));
   background-size: 400% 400%;
-  height: 100%;
+  height: 100vh;
   animation: Gradient 10s ease infinite;
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .contact-gradient {
+    height: 100%;
+  }
 }
 
 .contact-info {
