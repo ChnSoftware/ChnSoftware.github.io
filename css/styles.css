@@ -89,13 +89,6 @@ p {
   font-weight: 300;
 }
 
-@media (max-width: 768px) {
-  p {
-    font-size: 1.4rem;
-    line-height: 2rem;
-  }
-}
-
 a {
   text-decoration: none;
   text-transform: capitalize;
@@ -678,6 +671,14 @@ footer .footer-bottom {
   padding: 0 1rem;
   text-align: center;
   font-size: 1.6rem;
+}
+
+@media (max-width: 768px) {
+  footer .footer-bottom p,
+  footer .footer-bottom span,
+  footer .footer-bottom a {
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width: 768px) {
