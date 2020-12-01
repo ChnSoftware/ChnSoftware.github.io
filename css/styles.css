@@ -850,9 +850,6 @@ footer .footer-bottom i {
 
 @media (max-width: 768px) {
   .nav-header .navbar .nav-list .nav-item .nav-link {
-    display: inline-block;
-    width: 70%;
-    height: 8rem;
     margin: 0;
   }
 }
