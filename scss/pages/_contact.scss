@@ -13,7 +13,11 @@
 		height: 100vh;
 		animation: Gradient 10s ease infinite;
 		display: flex;
-        align-items: center;
+		align-items: center;
+
+		@include media(medium) {
+			height: 200vh;
+		}
 	}
 
 	&-info {

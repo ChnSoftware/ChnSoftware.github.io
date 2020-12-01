@@ -8,10 +8,18 @@
 	.error-box {
 		background-color: $dark-color;
 		width: 100%;
-		max-width: 50rem;
+		max-width: 70rem;
 		padding: 2.5rem 2.5rem 8rem;
 		text-align: center;
 		box-shadow: 0 0 2rem rgba($dark-color, 0.8);
+
+		@include media(large) {
+			max-width: 50rem;
+			padding: 2.5rem;
+		}
+		@include media(smallHeight) {
+			height: 100vh;
+		}
 
 		.logo {
 			width: 6rem;
@@ -20,29 +28,45 @@
 		.error-number {
 			font-family: $subtext-font;
 			color: $light-color;
-			font-size: 3.6rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1rem;
+			font-size: 6rem;
+			text-transform: uppercase;
+			letter-spacing: 0.1rem;
+			margin: 1rem 0;
+
+			@include media(large) {
+				font-size: 3.6rem;
+			}
+			@include media(medium) {
+				font-size: 3rem;
+			}
+			@include media(smallHeight) {
+				margin: 0.5rem;
+			}
 		}
 		.error-message {
-			font-size: 2rem;
+			font-size: 3.5rem;
 			font-weight: 400;
 			text-transform: uppercase;
 			background-color: $light-color;
 			display: inline-block;
 			padding: 1.5rem;
+
+			@include media(large) {
+				font-size: 2rem;
+			}
 		}
 		.error-description {
 			color: $light-color;
 			margin-top: 2.5rem;
 			margin-bottom: 2.5rem;
 			letter-spacing: 0.1rem;
+			font-size: 1.6;
 		}
 		.error-cta {
 			border: 0.1rem solid $green-color;
-            color: $green-color;
-            display: inline-block;
-			font-size: 1.7rem;
+			color: $green-color;
+			display: inline-block;
+			font-size: 2rem;
 			padding: 1rem 2.5rem;
 			transition: $general-transition;
 
@@ -50,10 +74,14 @@
 				color: $light-color;
 				background-color: $green-color;
 			}
+
+			@include media(medium) {
+				font-size: 1.7rem;
+			}
 		}
 	}
 }
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
 	.error-box {
 		max-width: 70rem !important;
 	}
@@ -69,4 +97,4 @@
 	.error-cta {
 		font-size: 2rem !important;
 	}
-}
+} */
