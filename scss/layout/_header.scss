@@ -118,7 +118,7 @@
 
 					@include media(medium) {
 						display: inline-block;
-						width: 100%;
+						width: 70%;
 						height: 8rem;
 						margin: 0;
 					}
@@ -128,8 +128,7 @@
 					}
 				}
 
-				&:hover,
-				&:active {
+				&:hover {
 					background-color: $green-color;
 				}
 			}

@@ -851,7 +851,7 @@ footer .footer-bottom i {
 @media (max-width: 768px) {
   .nav-header .navbar .nav-list .nav-item .nav-link {
     display: inline-block;
-    width: 100%;
+    width: 70%;
     height: 8rem;
     margin: 0;
   }
@@ -863,7 +863,7 @@ footer .footer-bottom i {
   }
 }
 
-.nav-header .navbar .nav-list .nav-item:hover, .nav-header .navbar .nav-list .nav-item:active {
+.nav-header .navbar .nav-list .nav-item:hover {
   background-color: #27ae60;
 }
 
