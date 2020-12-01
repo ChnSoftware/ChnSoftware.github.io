@@ -39,4 +39,9 @@
 			@content;
 		}
 	}
+	@if ($screensize == smallHeight) {
+		@media (max-height: 376px) {
+			@content;
+		}
+	}
 }
