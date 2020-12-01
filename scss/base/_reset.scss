@@ -66,7 +66,7 @@ p {
 	line-height: 2.5rem;
 	font-weight: 300;
 
-	@include media(small) {
+	@include media(medium) {
 		font-size: 1.4rem;
 		line-height: 2rem;
 	}
