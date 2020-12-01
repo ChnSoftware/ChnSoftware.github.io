@@ -10,14 +10,10 @@
 			rgba(#23d5ab, 0.5)
 		);
 		background-size: 400% 400%;
-		height: 100vh;
+		height: 100%;
 		animation: Gradient 10s ease infinite;
 		display: flex;
 		align-items: center;
-
-		@include media(medium) {
-			height: 100%;
-		}
 	}
 
 	&-info {
