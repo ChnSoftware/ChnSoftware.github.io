@@ -65,6 +65,11 @@ p {
 	font-size: 1.6rem;
 	line-height: 2.5rem;
 	font-weight: 300;
+
+	@include media(small) {
+		font-size: 1.4rem;
+		line-height: 2rem;
+	}
 }
 a {
 	text-decoration: none;
