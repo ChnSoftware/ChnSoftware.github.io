@@ -70,7 +70,7 @@ footer {
 							}
 						}
 
-						.menu-link {
+						.nav-link {
 							color: $gray-color;
 							line-height: 2.5rem;
 							@include general-transition(all, 300ms, ease);
@@ -156,7 +156,7 @@ footer {
 		}
 
 		span:nth-of-type(1) {
-			@include media(medium) {
+			@include media(large) {
 				display: none;
 			}
 		}

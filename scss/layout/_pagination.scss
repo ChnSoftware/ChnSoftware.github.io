@@ -9,16 +9,19 @@
 		text-align: center;
 		border-radius: 50%;
 		font-size: 2rem;
-	}
-	a {
 		background-color: $green-color;
 		color: $light-color;
 		transition: $general-transition;
 
+		&:not(:last-child) {
+			margin-right: 0.5rem;
+		}
+
 		&:hover {
 			background-color: lighten($green-color, 10%);
 		}
-		&:active {
+
+		&.active {
 			background-color: transparent;
 			color: $green-color;
 			border: 0.1rem solid $green-color;
